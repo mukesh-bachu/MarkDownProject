@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { MarkdownModule } from 'ngx-markdown';
 import { ScrollspyNavLayoutComponent } from "./scrollspy-nav-layout/scrollspy-nav-layout.component";
 import { RouterOutlet } from '@angular/router';
+import { AppMenuComponent } from './app.menu.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true, 
-  imports: [CommonModule,RouterOutlet, MarkdownModule, ScrollspyNavLayoutComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    imports: [CommonModule, RouterOutlet, MarkdownModule, ScrollspyNavLayoutComponent, AppMenuComponent]
 })
 export class AppComponent {
   title = 'sampleMDS';

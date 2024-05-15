@@ -1,46 +1,58 @@
-<app-scrollspy-nav-layout [headings]="headings">
-  <div style="margin-left: 15px;">
-    <h1>Cheat Sheet</h1>
-
-    <h2 id="example1">example 1</h2>
-  
-    <markdown>
-      The following examples are intended as a quick markdown reference and showcase. It is based on Adam Pritchard work of [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-    </markdown>
-
-<div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
-
-<h2 id = "example2">example 2</h2>
-
-<markdown>
-    Using directive with `src` property to fetch remote html file `app/bindings/remote/demo.html`
-  </markdown>
-
-  <div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
-
-  <h2 id ="example3">example 3</h2>
-
-<markdown>
-    Using directive with `src` property to fetch remote html file `app/bindings/remote/demo.html`
-  </markdown>
-
-  <div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
-
-  <h2 id="example4">example 4</h2>
-
-<markdown>
-    Using directive with `src` property to fetch remote html file `app/bindings/remote/demo.html`
-  </markdown>
-
-  <div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
-
-  <h2 id=""example5>example 5</h2>
-
-<markdown>
-    Using directive with `src` property to fetch remote html file `app/bindings/remote/demo.html`
-  </markdown>
-
-  <div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
+<div class="layout-wrapper" >
+  <!-- <app-news></app-news>
+  <app-topbar (onDarkModeSwitch)="toggleDarkMode()"></app-topbar>
+  <app-config (onDarkModeSwitch)="toggleDarkMode()"></app-config> -->
+  <!-- <div class="layout-mask" [ngClass]="{ 'layout-mask-active': isMenuActive }" (click)="hideMenu()"></div> -->
+  <div class="layout-content">
+      <app-menu></app-menu>
+      <div class="layout-content-slot">
+        <app-scrollspy-nav-layout [headings]="headings">
+          <div style="margin-left: 15px;">
+            <h1>Cheat Sheet</h1>
+        
+            <h2 id="example1">example 1</h2>
+          
+            <markdown>
+              The following examples are intended as a quick markdown reference and showcase. It is based on Adam Pritchard work of [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+            </markdown>
+        
+        <div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
+        
+        <h2 id = "example2">example 2</h2>
+        
+        <markdown>
+            Using directive with `src` property to fetch remote html file `app/bindings/remote/demo.html`
+          </markdown>
+        
+          <div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
+        
+          <h2 id ="example3">example 3</h2>
+        
+        <markdown>
+            Using directive with `src` property to fetch remote html file `app/bindings/remote/demo.html`
+          </markdown>
+        
+          <div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
+        
+          <h2 id="example4">example 4</h2>
+        
+        <markdown>
+            Using directive with `src` property to fetch remote html file `app/bindings/remote/demo.html`
+          </markdown>
+        
+          <div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
+        
+          <h2 id=""example5>example 5</h2>
+        
+        <markdown>
+            Using directive with `src` property to fetch remote html file `app/bindings/remote/demo.html`
+          </markdown>
+        
+          <div markdown [src]="'../assets/readme.md'" [disableSanitizer]="true"></div>
+        </div>
+        </app-scrollspy-nav-layout>
+          <router-outlet></router-outlet>
+      </div>
+  </div>
+  <!-- <app-footer></app-footer> -->
 </div>
-</app-scrollspy-nav-layout>
-<router-outlet></router-outlet>
